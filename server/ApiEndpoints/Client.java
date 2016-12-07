@@ -272,7 +272,7 @@ public class Client {
 						}
 						break;
 					case SEND:
-						out.println("GAME " + gid + " OVER PLAYER " + pid1 + " PLAYER " + pid2);
+						out.println("GAME " + gid + " OVER PLAYER " + pid1 + " " + ScoringUtilities.getPlayer1score()  + " PLAYER " + pid2 + " " + ScoringUtilities.getPlayer2score());
 					case GAMEOVER:
 						//EXITS CLIENT WHEN SERVER TERMINATES
 						done = true;
@@ -319,7 +319,7 @@ public class Client {
 		else if(fromServer.startsWith("GAME")) {
 			return Token.GAME;
 		}
-		else if(fromServer.startsWith("GAME OVER SEND")){
+		else if(fromServer.startsWith("GAME OVER SEND OUTCOMES")){
 			return Token.SEND;
 		}
 		else if(fromServer.startsWith("END OF ROUND")) {
