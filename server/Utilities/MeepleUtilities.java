@@ -1,13 +1,10 @@
 package Utilities;
 
-import GameState.Meeple;
+import GameState.Meeple.Meeple;
 import GameState.Board;
-import GameState.Tile;
 
 import java.awt.*;
 import java.util.*;
-
-import static Utilities.TileUtilities.getValidOrientationsFromPlacedTile;
 
 /**
  * Created by asebe on 11/10/2016.

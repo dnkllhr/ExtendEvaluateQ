@@ -1,9 +1,10 @@
 package GameState;
 
+import GameState.Meeple.Meeple;
 import Utilities.BoardUtilities;
 import Utilities.PointUtilities;
 import Utilities.FeatureUtilities;
-import Utilities.Tuple;
+import Utilities.ScoringUtilities;
 
 import java.awt.Point;
 import java.util.*;
@@ -356,7 +357,8 @@ public class Board {
             }
 
             // Score here
-
+            Area addedArea = new Area(removedFeature, featureExtent);
+            ScoringUtilities.addFeature(addedArea);
         }
 
     }

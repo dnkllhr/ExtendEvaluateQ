@@ -14,17 +14,20 @@ public class Player {
 	private String name;
 	private int score;
 	private int numOfMeeples;
+	private int numOfGoats;
 
     private Player() {
         this.name = "";
         this.score = 0;
         this.numOfMeeples = 7;
+		this.numOfGoats = 3;
     }
 
 	public Player(String name) {
 		this.name = name;
 		this.score = 0;
 		this.numOfMeeples = 7;
+		this.numOfGoats = 3;
 	}
 
 	public String getName() {
@@ -42,6 +45,8 @@ public class Player {
 	public int getNumOfMeeples() {
 		return this.numOfMeeples;
 	}
+
+	public int getNumOfGoats(){ return  this.getNumOfGoats();  }
 
 	public void placeMeeple() throws OutofMeeplesException {
 		if(numOfMeeples == 0) {
