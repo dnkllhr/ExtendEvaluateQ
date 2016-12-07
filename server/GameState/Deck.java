@@ -9,7 +9,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 public class Deck {
 
-    private static int TILE_COUNT = 76;
+    private static int TILE_COUNT = 78;
 
 	private final Queue<Tile> deck = new LinkedBlockingQueue<>(TILE_COUNT);
     private Engine engine;
@@ -55,6 +55,8 @@ public class Deck {
         addTilesToPicker(tilePicker, new Tile("LJTJD"), 2);
         addTilesToPicker(tilePicker, new Tile("TLLLC"), 2);
 
+        addTilesToPicker(tilePicker, new Tile("LTLT-"), 2);
+
         while(tilePicker.validDecisionsToPick()) {
 
             deck.add(tilePicker.pollChoice()); // Randomly picks tiles from the picker until it is empty
@@ -82,6 +84,19 @@ public class Deck {
 		return drawnTile;
 
 	}
+
+	public Tile drawTile2(){
+        if (deck.isEmpty()) {
+
+            return null;
+
+        }
+
+        Tile drawnTile;
+
+        drawnTile = deck.poll();
+        return drawnTile;
+    }
 
     // public void generateDeck(String[] deckFromServer, int numOfTiles) {
     //     for(int i = 0; i < numOfTiles; i++) {

@@ -283,6 +283,14 @@ public class Tile {
                         new Feature[] {Feature.LAKE, Feature.LAKE, Feature.LAKE, Feature.LAKE, Feature.LAKE},
                         new Feature[] {Feature.LAKE, Feature.LAKE, Feature.LAKE, Feature.LAKE, Feature.LAKE}
                 };
+            case "LTLT-":
+                return new Feature[][]{
+                        new Feature[] {Feature.UNKNOWN, Feature.LAKE, Feature.LAKE, Feature.LAKE, Feature.UNKNOWN},
+                        new Feature[] {Feature.JUNGLE, Feature.JUNGLE, Feature.LAKE, Feature.JUNGLE, Feature.JUNGLE},
+                        new Feature[] {Feature.TRAIL, Feature.TRAIL, Feature.TRAIL, Feature.TRAIL, Feature.TRAIL},
+                        new Feature[] {Feature.JUNGLE, Feature.JUNGLE, Feature.LAKE, Feature.JUNGLE, Feature.JUNGLE},
+                        new Feature[] {Feature.UNKNOWN, Feature.LAKE, Feature.LAKE, Feature.LAKE, Feature.UNKNOWN},
+                };
             default:
                 throw new RuntimeException("Invalid tile created!");
         }
